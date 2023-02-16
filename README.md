@@ -1,14 +1,41 @@
 # FastAPI final
 This is my homework project on educational platform  <<stepik.org>>
 
-![](https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg)
+![](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)
 
 ##First you have to download all libraries. All the dependencies in requirements.txt
 sudo apt install requirements.txt
 
 
-##In order to run porject
-uvicorn main:app --reload
+##Installation
+```
+$ pip install fastapi
+
+---> 100%
+```
+
+You will also need an ASGI server, for production such as Uvicorn or Hypercorn.
+
+```
+$ pip install "uvicorn[standard]"
+
+---> 100%
+```
+
+###Run it
+
+Run the server with:
+
+```
+$ uvicorn main:app --reload
+
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [28720]
+INFO:     Started server process [28722]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
+
 
 
 #Routes
