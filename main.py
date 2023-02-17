@@ -62,7 +62,6 @@ def get_elements():
 #calculator
 @app.post("/calculator/")
 def post(item: expr):
-    print(item)
     expr = item.expr.split(',')
     expr = int(expr[0]),str(expr[1]),int(expr[2])
     if expr[1] not in ["+","-","*","/"]:
