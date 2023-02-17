@@ -30,17 +30,17 @@ def get_list():
     print(data)
 
 def test_calculator():
-    response = client.post('/calculator',json={"expr": "5,'+',6"})
+    response = client.post('/calculator',json={"expr": "5,+,6"})
     assert response.status_code == 200
-    response = client.post('/calculator',json={"expr": "5,'-',6"})
+    response = client.post('/calculator',json={"expr": "5,-,6"})
     assert response.status_code == 200
-    response = client.post('/calculator',json={"expr": "5,'*',6"})
+    response = client.post('/calculator',json={"expr": "5,*,6"})
     assert response.status_code == 200
-    response = client.post('/calculator',json={"expr": "5,'/',6"})
+    response = client.post('/calculator',json={"expr": "5,/,6"})
     assert response.status_code == 200
-    response = client.post('/calculator',json={"expr": "5,'/',0"})
+    response = client.post('/calculator',json={"expr": "5,/,0"})
     assert response.status_code == 403
-    response = client.post('/calculator',json={"expr": "5,'+',6"})
+    response = client.post('/calculator',json={"expr": "5,string,0"})
     assert response.status_code == 400
     
 
